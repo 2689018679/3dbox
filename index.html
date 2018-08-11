@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: #666;
+}
+.box{
+	width: 600px;
+	height: 600px;
+	border-radius: 100px;
+	margin: 50px auto;
+	border: 10px solid #ff0099;
+	perspective: 1000px;
+	transform-style:preserve-3d;
+}
+ul li{
+	width: 300px;
+	height: 300px;
+	transition: 2s;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+ul{
+	width: 300px;
+	height: 300px;
+	margin: 150px auto;
+	position: relative;
+	transition: 2s;
+	transform-style:preserve-3d;
+}
+.box:hover ul{
+	transform: rotate3d(1, 1, 1, 360deg);
+}
+.box:hover .left{
+	background: #F79D4F;
+	box-shadow: 0 0 15px 10px rgba(255, 255, 255, .3);
+	transform: translateX(-150px) rotateY(90deg);
+}
+.box:hover .right{
+	background: #49B87B;
+	transform: translateX(150px) rotateY(90deg);
+	box-shadow: 0 0 15px 10px rgba(255, 255, 255, .3);
+}
+.box:hover .top{
+	background: #7D3890;
+	transform: translateY(-150px) rotateX(90deg);
+	box-shadow: 0 0 15px 10px rgba(255, 255, 255, .3);
+}
+.box:hover .bottom{
+	background: #E04283;
+	transform: translateY(150px) rotateX(90deg);
+	box-shadow: 0 0 15px 10px rgba(255, 255, 255, .3);
+}
+.box:hover .before{
+	background: #FAEB48;
+	transform: translateZ(150px);
+	box-shadow: 0 0 15px 10px rgba(255, 255, 255, .3);
+}
+.box:hover .after{
+	background: #4894CE;
+	transform: translateZ(-150px);
+	box-shadow: 0 0 15px 10px rgba(255, 255, 255, .3);
+}
+</style>
+<body>
+	<div class="box">
+		<ul>
+			<li class="left"></li>
+			<li class="right"></li>
+			<li class="top"></li>
+			<li class="bottom"></li>
+			<li class="before"></li>
+			<li class="after"></li>
+		</ul>
+	</div>
+</body>
+</html>
